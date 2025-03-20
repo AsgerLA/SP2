@@ -10,16 +10,19 @@ public abstract class Title {
     this.title = title;
     this.copies = copies;
 
-    if (literatureType.equals("BI"))
+    if (literatureType.equals("BI")) {
       this.literatureTypePoints = 3.0f;
-    else if (literatureType.equals("TE"))
+    } else if (literatureType.equals("TE")) {
       this.literatureTypePoints = 3.0f;
-    else if (literatureType.equals("LYRIK"))
+    } else if (literatureType.equals("LYRIK")) {
       this.literatureTypePoints = 6.0f;
-    else if (literatureType.equals("SKØN"))
+    } else if (literatureType.equals("SKØN")) {
       this.literatureTypePoints = 1.7f;
-    else if (literatureType.equals("FAG"))
+    } else if (literatureType.equals("FAG")) {
       this.literatureTypePoints = 1.0f;
+    } else {
+      throw new IllegalArgumentException("Unknown literatureType '"+literatureType+"'");
+    }
 
   }
 

@@ -50,6 +50,7 @@ public class LibraryRoyalityCalculator {
     }
     rand.setSeed(seed);
 
+    System.out.printf("Seed: %d\n", seed);
     authors = new Author[rand.nextInt(1, 16)];
 
     for (i = 0; i < authors.length; i++) {
